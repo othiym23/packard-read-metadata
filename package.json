@@ -1,0 +1,49 @@
+{
+  "name": "@packard/read-metadata",
+  "version": "1.0.0",
+  "description": "Give a path, get a model object.",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepare": "rimraf lib && babel src -d lib",
+    "test": "standard && npm run prepare && tap --coverage test/*.js"
+  },
+  "standard": {
+    "ignore": [
+      "lib/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/othiym23/packard-read-metadata.git"
+  },
+  "keywords": [
+    "packard",
+    "audio",
+    "metadata"
+  ],
+  "author": "Forrest L Norvell <ogd@aoaioxxysz.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/othiym23/packard-read-metadata/issues"
+  },
+  "homepage": "https://github.com/othiym23/packard-read-metadata#readme",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0",
+    "rimraf": "^2.5.4",
+    "standard": "^8.6.0",
+    "tap": "^10.1.0"
+  },
+  "dependencies": {
+    "@packard/model": "^3.0.2",
+    "aproba": "^1.1.1",
+    "bluebird": "^3.4.7",
+    "buffertools": "^2.1.4",
+    "flac-parser": "^0.3.2",
+    "mississippi": "^1.3.0",
+    "mp4-parser": "^0.3.0",
+    "musicmetadata": "^2.0.5",
+    "npmlog": "^4.0.2",
+    "which": "^1.2.12"
+  }
+}
