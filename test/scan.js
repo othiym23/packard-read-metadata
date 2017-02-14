@@ -15,12 +15,11 @@ var root = join(__dirname, 'metadata-read-mp3')
 
 test('empty track', function (t) {
   var empty = join(__dirname, 'fixtures', 'empty.mp3')
-  stat(empty).then(function (stats) {
-    scan({ path: empty, stats: stats }, new Map())
+  return stat(empty).then(function (stats) {
+    return scan({ path: empty, stats: stats }, new Map())
       .then(function (track) {
         t.ok(track, 'should get back a track')
         t.equal(track.file.path, empty)
-        t.end()
       })
   })
 })
